@@ -1,0 +1,18 @@
+1. At line 12, `3` is printed because `i` is declared with `var` inside the for loop (function-scope). Once `i < prices.length` becomes false, the loop stops with the value 3 since the length of prices is 3.
+2. At line 13, `150` is printed because `var discountedPrice` is inside the for loop, which is still accessible after the loop terminates. The value is 150 becuase the last iteration is 300 * (1 - 0.5) = 150.
+3. At line 14, `150` is printed because `var finalPrice` is declared outside the loop, which is still accessible after the loop terminates. The last iteration is 300 * (1 - 0.5) = 150.
+4. `[50, 100, 150]` is returned because each price is multiplied by (1 - 0.5) = 0.5, so half of the original prices in the array. The discounted 
+5. There is an error because `i` is declared inside the for loop by `let` (block-scoped). `i` cannot be accessed outside the loop.
+6. There is an error because `let discountedPrice`is declared inside the for loop (block-scoped). It cannot be accessed outside the loop.
+7. `150` is printed at line 14 because finalPrice is accessible after the loop terminates (declared with let outside the loop). The last updated value from the loop is 105.
+8. `[50, 100, 150]` is returned because each price is half of the original price computed by the multiplier. The discounted array is updated.
+9. There is an error because `let i` is declared inside the for loop (block-scoped). It cannot be accessed outside.
+10. `3` is printed at line 12 since `const length` is declared outside the loop, so it can be accessed anywhere in the function. The length of prices is 3.
+11. `[50, 100, 150]` is returned because each price is discounted half off. The discounted array is updated.
+12. A. student.name <br> B. student['Grad Year'] <br> C. student.greeting() <br> D. student['Favorite Teacher'].name <br> E. student.courseLoad[0]
+13. A. The output is "32" because of string concatenation ('3' is a string). <br> B. The output is 1 because '3' is converted to an integer and subtraction is performed. <br> C. The output is 3 because null is converted to 0. <br> D. The output is "3null" because null is converted into a string and concatenated. <br> E. The output is 4 because true is converted to 1. <br> F. The output is 0 because both false and null are 0. <br> G. The output is "3undefined" because undefined is convered into a string and concatenated. <br> H. The output is NaN because under numeric operations, undefined becomes NaN.
+14. A. true; '2' is converted into integer 2. <br> B. false; comparison between strings is lexicographical and '2' > '1'. <br> C. true; type coercion due to ==, so '2' becomes integer 2. <br> D. false; === compares value and type, here it is number vs string. <br> E. false; true is 1, however 1 does not equal 2. <br> F. true; Boolean(2) is true and both are same type and value.
+15. The difference between == and === operators: The == operator converts operands to the same type before comparing values. The === operator does not perform any type conversion, comparing both value and type.
+
+<br> 17. The result is [2, 4, 6] because the function modifyArray iterates through each element, calls the callback function doSomething which multiplies the number by 2. Then, it pushes the results into a new array and returns it.
+<br> 19. The output is: <br> 1 <br> 4 <br> 3 <br> 2 <br> Here, 1 and 4 are printed immediately and setTimeout runs next, printing 3. After one second, setTimeout with 1000ms delay prints 2.

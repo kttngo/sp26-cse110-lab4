@@ -1,0 +1,2 @@
+1. The bug was that num1 and num2 were strings instead of integers. In this case, JS performs string concatenation instead of addition.
+2. I would fix the bug by converting num1 and num2 into numbers, and then add them together. In the fix, I used Number() instead of parseInt() to correctly handle both integer and decimals.
